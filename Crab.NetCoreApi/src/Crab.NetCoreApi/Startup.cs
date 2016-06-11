@@ -5,9 +5,12 @@ using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
 namespace Crab.NetCoreApi
 {
@@ -36,7 +39,19 @@ namespace Crab.NetCoreApi
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
-            services.AddMvc();
+            services.AddMvc(options =>
+            {
+                // Configure Json formatter.
+                // http://www.strathweb.com/2014/11/formatters-asp-net-mvc-6/
+                options.InputFormatters.Clear();
+
+                var jsonOutputFormatter = new JsonOutputFormatter();
+                jsonOutputFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+                jsonOutputFormatter.SerializerSettings.DefaultValueHandling = DefaultValueHandling.Ignore;
+
+                options.OutputFormatters.Clear();
+                options.OutputFormatters.Insert(0, jsonOutputFormatter);
+            });
             services.AddSingleton<IMapper>(sp => MapperConfiguration.CreateMapper());
         }
 
