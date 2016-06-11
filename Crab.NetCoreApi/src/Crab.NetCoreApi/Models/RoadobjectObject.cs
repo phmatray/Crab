@@ -2,14 +2,10 @@ using System;
 
 namespace Crab.NetCoreApi.Models
 {
-    public class RegionObject
+    public class RoadobjectObject
     {
-        public string Url => $"/regions/{RegionId}/";
-        public string Description => "...";
-
-        public int RegionId { get; set; }
-        public string RegionNameLanguageCode { get; set; }
-        public string RegionName { get; set; }
+        public string RoadobjectId { get; set; }
+        public int RoadobjectType { get; set; }
         public decimal CenterX { get; set; }
         public decimal CenterY { get; set; }
         public decimal MinimumX { get; set; }
@@ -20,7 +16,5 @@ namespace Crab.NetCoreApi.Models
         public DateTime StartTime { get; set; }
         public int StartExploitation { get; set; }
         public int StartOrganisation { get; set; }
-
-        public string Communes => $"/regions/{RegionId}/communes/";
     }
 }

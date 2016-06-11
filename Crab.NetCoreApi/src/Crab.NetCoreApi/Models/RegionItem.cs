@@ -1,14 +1,14 @@
-﻿namespace Crab.NetCoreApi.Models
+namespace Crab.NetCoreApi.Models
 {
     public class RegionItem
     {
-        public string Url => $"/regions/{Id}/";
+        public string Url => $"/regions/{RegionId}/";
         public string Description => "...";
 
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string NameLanguageCode { get; set; }
+        public int RegionId { get; set; }
+        public string RegionNameLanguageCode { get; set; }
+        public string RegionName { get; set; }
 
-        public string Communes => $"/regions/{Id}/communes/";
+        public string Communes => $"/regions/{RegionId}/communes/";
     }
 }

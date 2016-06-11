@@ -2,14 +2,18 @@
 {
     public class CommuneItem
     {
-        public string Url => $"/communes/{Id}/";
+        public string Url => $"/communes/{CommuneId}/";
         public string Description => "...";
 
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string NameLanguageCode { get; set; }
-        public string LanguageCode1 { get; set; }
+        public int CommuneId { get; set; }
+        public string CommuneName { get; set; }
+        public string CommuneNameLanguageCode { get; set; }
+        public string LanguageCode { get; set; }
         public string LanguageCode2 { get; set; }
-        public int NISCommuneCode { get; set; }
+        public int CommuneNISCode { get; set; }
+
+        public string Postalcantons => $"/communes/{CommuneId}/postalcantons/";
+        public string Streetnames => $"/communes/{CommuneId}/streetnames/";
+        public string StreetnamesWithStatus => $"/communes/{CommuneId}/streetnameswithstatus/";
     }
 }
