@@ -2,7 +2,7 @@
 {
     public class CommuneItem
     {
-        public string Url => $"/regions/{Id}/communes/";
+        public string Url => $"/communes/{Id}/";
         public string Description => "...";
 
         public int Id { get; set; }

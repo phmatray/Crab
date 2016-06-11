@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using AutoMapper;
 using Crab.NetCoreApi.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -17,6 +16,15 @@ namespace Crab.NetCoreApi.Controllers
         {
             Mapper = mapper;
             _client = new WsCrabClient();
+        }
+
+        // GET api/communes/1
+        [HttpGet("{id}")]
+        public async Task<CommuneObject> Get(int id)
+        {
+            var item = await _client.GetGemeenteByGemeenteIdAsync(id);
+            var result = Mapper.Map<CommuneObject>(item);
+            return result;
         }
     }
 }
