@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Crab.NetCoreApi.Models;
@@ -10,19 +11,20 @@ namespace Crab.NetCoreApi.Controllers
     [Route("api/[controller]")]
     public class RegionsController : Controller
     {
+        private readonly WsCrabClient _client;
         private IMapper Mapper { get; set; }
 
         public RegionsController([FromServices]IMapper mapper)
         {
             Mapper = mapper;
+            _client = new WsCrabClient();
         }
 
         // GET api/regions
         [HttpGet]
         public async Task<IEnumerable<RegionItem>> Get()
         {
-            var client = new WsCrabClient();
-            var items = await client.ListGewestenAsync(0);
+            var items = await _client.ListGewestenAsync(0);
             var result = Mapper.Map<IEnumerable<RegionItem>>(items);
             return result;
         }
@@ -31,10 +33,18 @@ namespace Crab.NetCoreApi.Controllers
         [HttpGet("{id}")]
         public async Task<RegionObject> Get(int id)
         {
-            var client = new WsCrabClient();
-            var item = await client.GetGewestByGewestIdAndTaalCodeAsync(id, "fr");
+            var item = await _client.GetGewestByGewestIdAndTaalCodeAsync(id, "fr");
             var body = item.Body.GetGewestByGewestIdAndTaalCodeResult;
             var result = Mapper.Map<RegionObject>(body);
+            return result;
+        }
+
+        // GET api/regions/1/communes
+        [HttpGet("{id}/communes")]
+        public async Task<object> GetCommunes(int id)
+        {
+            var items = await _client.ListGemeentenByGewestIdAsync(id, 0);
+            var result = Mapper.Map<IEnumerable<CommuneItem>>(items);
             return result;
         }
     }

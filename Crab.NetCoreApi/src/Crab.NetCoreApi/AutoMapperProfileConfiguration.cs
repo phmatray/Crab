@@ -32,6 +32,13 @@ namespace Crab.NetCoreApi
                 .ForMember(dest => dest.StartExploitation, conf => conf.MapFrom(src => src.BeginBewerking))
                 .ForMember(dest => dest.StartOrganisation, conf => conf.MapFrom(src => src.BeginOrganisatie));
 
+            CreateMap<GemeenteItem, CommuneItem>()
+                .ForMember(dest => dest.Id, conf => conf.MapFrom(src => src.GemeenteId))
+                .ForMember(dest => dest.Name, conf => conf.MapFrom(src => src.GemeenteNaam))
+                .ForMember(dest => dest.NameLanguageCode, conf => conf.MapFrom(src => src.TaalCodeGemeenteNaam))
+                .ForMember(dest => dest.LanguageCode1, conf => conf.MapFrom(src => src.TaalCode))
+                .ForMember(dest => dest.LanguageCode2, conf => conf.MapFrom(src => src.TaalCodeTweedeTaal))
+                .ForMember(dest => dest.NISCommuneCode, conf => conf.MapFrom(src => src.NISGemeenteCode));
 
             //CreateMap<Application, ApplicationViewModel>();
             //CreateMap<ApplicationViewModel, Application>();

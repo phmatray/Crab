@@ -4,7 +4,7 @@ namespace Crab.NetCoreApi.Models
 {
     public class RegionObject
     {
-        public string Url => $"/regions/{Id}";
+        public string Url => $"/regions/{Id}/";
         public string Description => "...";
 
         public int Id { get; set; }
@@ -20,5 +20,7 @@ namespace Crab.NetCoreApi.Models
         public DateTime StartTime { get; set; }
         public int StartExploitation { get; set; }
         public int StartOrganisation { get; set; }
+
+        public string Communes => $"/regions/{Id}/communes/";
     }
 }
