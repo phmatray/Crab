@@ -12,6 +12,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Crab.NetCoreApi", "src\Crab.NetCoreApi\Crab.NetCoreApi.xproj", "{A433FB2B-F294-4905-8F28-349BCB142F28}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{27034710-B7C5-4D7D-A7F3-5476CA6AF894}"
+	ProjectSection(SolutionItems) = preProject
+		Documentation\Handleiding WS-CRAB.pdf = Documentation\Handleiding WS-CRAB.pdf
+		Documentation\Readme.md = Documentation\Readme.md
+		Documentation\wscrabmodel.png = Documentation\wscrabmodel.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
