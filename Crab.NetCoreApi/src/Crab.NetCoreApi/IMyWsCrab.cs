@@ -9,7 +9,7 @@ namespace Crab.NetCoreApi
         Task<FindGemeentenResponse> FindGemeentenAsync(FindGemeentenRequest request);
         Task<FindHuisnummersResponse> FindHuisnummersAsync(FindHuisnummersRequest request);
         Task<FindHuisnummersWithStatusResponse> FindHuisnummersWithStatusAsync(FindHuisnummersWithStatusRequest request);
-        Task<FindStraatnamenResponse> FindStraatnamenAsync(FindStraatnamenRequest request);
+        //Task<FindStraatnamenResponse> FindStraatnamenAsync(FindStraatnamenRequest request);
         Task<FindStraatnamenWithStatusResponse> FindStraatnamenWithStatusAsync(FindStraatnamenWithStatusRequest request);
         Task<FindSubadressenResponse> FindSubadressenAsync(FindSubadressenRequest request);
         Task<FindSubadressenWithStatusResponse> FindSubadressenWithStatusAsync(FindSubadressenWithStatusRequest request);
@@ -49,7 +49,7 @@ namespace Crab.NetCoreApi
         Task<PostkantonObject> GetPostkantonByHuisnummerIdAsync(int HuisnummerId);
         Task<RijksregisterstraatObject> GetRijksregisterStraatByRijksregisterStraatCodeAsync(int StraatCode, int SubkantonCode);
         Task<StraatnaamObject> GetStraatnaamByRijksregisterStraatCodeAsync(int StraatCode, int SubkantonCode);
-        Task<StraatnaamObject> GetStraatnaamByStraatnaamIdAsync(int StraatnaamId);
+        //Task<StraatnaamObject> GetStraatnaamByStraatnaamIdAsync(int StraatnaamId);
         Task<StraatnaamWithStatusObject> GetStraatnaamWithStatusByRijksregisterStraatCodeAsync(int StraatCode, int SubkantonCode);
         Task<StraatnaamWithStatusObject> GetStraatnaamWithStatusByStraatnaamIdAsync(int StraatnaamId);
         Task<SubadresObject> GetSubadresBySubadresIdAsync(int SubadresId);

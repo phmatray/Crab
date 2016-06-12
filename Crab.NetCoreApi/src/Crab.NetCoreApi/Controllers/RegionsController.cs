@@ -32,9 +32,9 @@ namespace Crab.NetCoreApi.Controllers
         [HttpGet("{id}")]
         public async Task<RegionObject> Get(int id)
         {
-            var item = await _client.GetGewestByGewestIdAndTaalCodeAsync(id, "fr");
-            var body = item.Body.GetGewestByGewestIdAndTaalCodeResult;
-            var result = Mapper.Map<RegionObject>(body);
+            var response = await _client.GetGewestByGewestIdAndTaalCodeAsync(id, "fr");
+            var item = response.Body.GetGewestByGewestIdAndTaalCodeResult;
+            var result = Mapper.Map<RegionObject>(item);
             return result;
         }
 

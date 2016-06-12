@@ -4,6 +4,8 @@ namespace Crab.NetCoreApi.Models
 {
     public class StreetnameObject
     {
+        public string Url => $"api/streetnames/{StreetnameId}";
+
         public int CommuneId { get; set; }
         public int StreetnameId { get; set; }
         public string Streetname { get; set; }
@@ -15,5 +17,7 @@ namespace Crab.NetCoreApi.Models
         public DateTime StartTime { get; set; }
         public int StartExploitation { get; set; }
         public int StartOrganisation { get; set; }
+
+        public string Commune => $"api/communes/{CommuneId}";
     }
 }

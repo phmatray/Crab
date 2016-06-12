@@ -2,6 +2,8 @@ namespace Crab.NetCoreApi.Models
 {
     public class StreetnameItem
     {
+        public string Url => $"api/streetnames/{StreetnameId}";
+
         public int StreetnameId { get; set; }
         public string Streetname { get; set; }
         public string Streetname2 { get; set; }

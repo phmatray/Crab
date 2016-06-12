@@ -1,4 +1,7 @@
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using AutoMapper;
+using Crab.NetCoreApi.Models;
 using Microsoft.AspNetCore.Mvc;
 using WsCrabServiceReference;
 
