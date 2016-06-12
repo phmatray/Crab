@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using AutoMapper;
 using Crab.NetCoreApi.Models;
 using WsCrabServiceReference;
-using CodeItem = Crab.NetCoreApi.Models.CodeItem;
 
 namespace Crab.NetCoreApi
 {
@@ -246,7 +245,7 @@ namespace Crab.NetCoreApi
                 .ForMember(dest => dest.StartExploitation, conf => conf.MapFrom(src => src.BeginBewerking))
                 .ForMember(dest => dest.StartOrganisation, conf => conf.MapFrom(src => src.BeginOrganisatie));
 
-            CreateMap<WsCrabServiceReference.CodeItem, CodeItem>()
+            CreateMap<WsCrabServiceReference.CodeItem, CodenameItem>()
                 .ForMember(dest => dest.Code, conf => conf.MapFrom(src => src.Code))
                 .ForMember(dest => dest.Name, conf => conf.MapFrom(src => src.Naam))
                 .ForMember(dest => dest.Definition, conf => conf.MapFrom(src => src.Definitie));

@@ -1,6 +1,6 @@
 namespace Crab.NetCoreApi.Models
 {
-    public class CodeItem
+    public class CodenameItem
     {
         public string Code { get; set; }
         public string Name { get; set; }
