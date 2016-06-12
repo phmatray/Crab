@@ -51,7 +51,7 @@ namespace Crab.NetCoreApi
         Task<StraatnaamObject> GetStraatnaamByRijksregisterStraatCodeAsync(int StraatCode, int SubkantonCode);
         //Task<StraatnaamObject> GetStraatnaamByStraatnaamIdAsync(int StraatnaamId);
         Task<StraatnaamWithStatusObject> GetStraatnaamWithStatusByRijksregisterStraatCodeAsync(int StraatCode, int SubkantonCode);
-        Task<StraatnaamWithStatusObject> GetStraatnaamWithStatusByStraatnaamIdAsync(int StraatnaamId);
+        //Task<StraatnaamWithStatusObject> GetStraatnaamWithStatusByStraatnaamIdAsync(int StraatnaamId);
         Task<SubadresObject> GetSubadresBySubadresIdAsync(int SubadresId);
         Task<SubadresWithStatusObject> GetSubadresWithStatusBySubadresIdAsync(int SubadresId);
         Task<CodeItem[]> ListAardAdressenAsync(int SorteerVeld);
@@ -68,7 +68,7 @@ namespace Crab.NetCoreApi
         Task<CodeItem[]> ListGeometriemethodeWegsegmentenAsync(int SorteerVeld);
         //Task<GewestItem[]> ListGewestenAsync(int SorteerVeld);
         Task<CodeItem[]> ListHerkomstAdrespositiesAsync(int SorteerVeld);
-        Task<HuisnummerItem[]> ListHuisnummersByStraatnaamIdAsync(int StraatnaamId, int SorteerVeld);
+        //Task<HuisnummerItem[]> ListHuisnummersByStraatnaamIdAsync(int StraatnaamId, int SorteerVeld);
         Task<HuisnummerWithStatusItem[]> ListHuisnummersWithStatusByRijksregisterAdresIdAsync(int RijksregisterAdresId, int SorteerVeld);
         Task<HuisnummerWithStatusItem[]> ListHuisnummersWithStatusByStraatnaamIdAsync(int StraatnaamId, int SorteerVeld);
         Task<CodeItem[]> ListOrganisatiesAsync(int SorteerVeld);

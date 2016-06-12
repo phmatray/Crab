@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
 using Crab.NetCoreApi.Models;
@@ -24,6 +25,24 @@ namespace Crab.NetCoreApi.Controllers
         {
             var item = await _client.GetStraatnaamByStraatnaamIdAsync(id);
             var result = Mapper.Map<StreetnameObject>(item);
+            return result;
+        }
+
+        // GET api/streetnames/1/withstatus
+        [HttpGet("{id}/withstatus")]
+        public async Task<StreetnameWithStatusObject> GetWithStatus(int id)
+        {
+            var item = await _client.GetStraatnaamWithStatusByStraatnaamIdAsync(id);
+            var result = Mapper.Map<StreetnameWithStatusObject>(item);
+            return result;
+        }
+
+        // GET api/streetnames/1/housenumbers
+        [HttpGet("{id}/housenumbers")]
+        public async Task<IEnumerable<HousenumberItem>> GetHousenumbers(int id)
+        {
+            var items = await _client.ListHuisnummersByStraatnaamIdAsync(id, 0);
+            var result = Mapper.Map<IEnumerable<HousenumberItem>>(items);
             return result;
         }
     }

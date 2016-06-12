@@ -2,7 +2,7 @@ namespace Crab.NetCoreApi.Models
 {
     public class StreetnameItem
     {
-        public string Url => $"api/streetnames/{StreetnameId}";
+        public string Url => $"streetnames/{StreetnameId}";
 
         public int StreetnameId { get; set; }
         public string Streetname { get; set; }
@@ -10,5 +10,7 @@ namespace Crab.NetCoreApi.Models
         public string LanguageCode { get; set; }
         public string LanguageCode2 { get; set; }
         public string StreetnameLabel { get; set; }
+
+        public string Housenumbers => $"streetnames/{StreetnameId}/housenumbers";
     }
 }
