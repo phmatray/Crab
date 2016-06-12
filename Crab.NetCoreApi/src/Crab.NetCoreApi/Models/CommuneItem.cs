@@ -14,6 +14,6 @@
 
         public string Postalcantons => $"/communes/{CommuneId}/postalcantons/";
         public string Streetnames => $"/communes/{CommuneId}/streetnames/";
-        public string StreetnamesWithStatus => $"/communes/{CommuneId}/streetnameswithstatus/";
+        public string StreetnamesWithStatus => $"/communes/{CommuneId}/streetnames/withstatus/";
     }
 }

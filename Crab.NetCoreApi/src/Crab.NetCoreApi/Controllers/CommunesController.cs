@@ -58,13 +58,24 @@ namespace Crab.NetCoreApi.Controllers
             }
         }
 
-        // GET api/communes/1/streetnameswithstatus
-        [HttpGet("{id}/streetnameswithstatus")]
-        public async Task<IEnumerable<StreetnameWithStatusItem>> GetStreetnamesWithStatus(int id)
+        // GET api/communes/1/streetnames/withstatus
+        // GET api/communes/1/streetnames/withstatus?query=%guillemins%
+        [HttpGet("{id}/streetnames/withstatus")]
+        public async Task<IEnumerable<StreetnameWithStatusItem>> GetStreetnamesWithStatus(int id, string query = null)
         {
-            var items = await _client.ListStraatnamenWithStatusByGemeenteIdAsync(id, 0);
-            var result = Mapper.Map<IEnumerable<StreetnameWithStatusItem>>(items);
-            return result;
+            if (query == null)
+            {
+                var items = await _client.ListStraatnamenWithStatusByGemeenteIdAsync(id, 0);
+                var result = Mapper.Map<IEnumerable<StreetnameWithStatusItem>>(items);
+                return result;
+            }
+            else
+            {
+                var response = await _client.FindStraatnamenWithStatusAsync(query, id, 0);
+                var items = response.Body.FindStraatnamenWithStatusResult;
+                var result = Mapper.Map<IEnumerable<StreetnameWithStatusItem>>(items);
+                return result;
+            }
         }
     }
 }

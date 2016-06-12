@@ -12,5 +12,8 @@ namespace Crab.NetCoreApi.Models
         public string StreetnameLabel { get; set; }
 
         public string Housenumbers => $"streetnames/{StreetnameId}/housenumbers";
+        public string HousenumbersWithstatus => $"streetnames/{StreetnameId}/housenumbers/withstatus";
+        public string Roadobjects => $"streetnames/{StreetnameId}/roadobjects";
+        public string Roadsegments => $"streetnames/{StreetnameId}/roadsegments";
     }
 }

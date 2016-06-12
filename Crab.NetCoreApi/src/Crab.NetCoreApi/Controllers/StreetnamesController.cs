@@ -45,5 +45,32 @@ namespace Crab.NetCoreApi.Controllers
             var result = Mapper.Map<IEnumerable<HousenumberItem>>(items);
             return result;
         }
+
+        // GET api/streetnames/1/housenumbers/withstatus
+        [HttpGet("{id}/housenumbers/withstatus")]
+        public async Task<IEnumerable<HousenumberWithStatusItem>> GetHousenumbersWithstatus(int id)
+        {
+            var items = await _client.ListHuisnummersWithStatusByStraatnaamIdAsync(id, 0);
+            var result = Mapper.Map<IEnumerable<HousenumberWithStatusItem>>(items);
+            return result;
+        }
+
+        // GET api/streetnames/1/roadobjects
+        [HttpGet("{id}/roadobjects")]
+        public async Task<IEnumerable<RoadobjectItem>> GetRoadobjects(int id)
+        {
+            var items = await _client.ListWegobjectenByStraatnaamIdAsync(id, 0);
+            var result = Mapper.Map<IEnumerable<RoadobjectItem>>(items);
+            return result;
+        }
+
+        // GET api/streetnames/1/roadsegments
+        [HttpGet("{id}/roadsegments")]
+        public async Task<IEnumerable<RoadsegmentItem>> GetRoadsegments(int id)
+        {
+            var items = await _client.ListWegsegmentenByStraatnaamIdAsync(id, 0);
+            var result = Mapper.Map<IEnumerable<RoadsegmentItem>>(items);
+            return result;
+        }
     }
 }
