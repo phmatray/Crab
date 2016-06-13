@@ -20,6 +20,8 @@ namespace Crab.NetCoreApi.Models
         public int StartOrganisation { get; set; }
 
         public string Commune => $"communes/{CommuneId}";
+
+        public string WithoutStatus => $"streetnames/{StreetnameId}";
         public string Housenumbers => $"streetnames/{StreetnameId}/housenumbers";
         public string HousenumbersWithstatus => $"streetnames/{StreetnameId}/housenumbers/withstatus";
         public string Roadobjects => $"streetnames/{StreetnameId}/roadobjects";
