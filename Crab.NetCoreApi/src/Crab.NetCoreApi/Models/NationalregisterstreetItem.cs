@@ -1,6 +1,6 @@
 namespace Crab.NetCoreApi.Models
 {
-    public class NationalregisterstreetItem
+    public class NationalregisterStreetItem
     {
         public string Url => $"/nationalregisterstreets/{StreetCode},{SubcantonCode}/";
 

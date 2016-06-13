@@ -7,5 +7,8 @@ namespace Crab.NetCoreApi.Models
         public string Index { get; set; }
         public int StreetCode { get; set; }
         public int SubcantonCode { get; set; }
+
+        string UrlHousenumbersWithstatus => $"nationalregisteraddresses/{NationalregisterAddressId}/housenumbers/withstatus";
+        string UrlSubaddressesWithstatus => $"nationalregisteraddresses/{NationalregisterAddressId}/housenumbers/withstatus";
     }
 }

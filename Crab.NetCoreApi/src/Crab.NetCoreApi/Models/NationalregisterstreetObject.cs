@@ -2,7 +2,7 @@ using System;
 
 namespace Crab.NetCoreApi.Models
 {
-    public class NationalregisterstreetObject
+    public class NationalregisterStreetObject
     {
         public string Url => $"/nationalregisterstreets/{StreetCode},{SubcantonCode}/";
 

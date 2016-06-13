@@ -20,10 +20,10 @@ namespace Crab.NetCoreApi.Controllers
 
         // GET api/nationalregisterstreets/1,1
         [HttpGet("{streetCode},{subcantonCode}")]
-        public async Task<NationalregisterstreetObject> Get(int streetCode, int subcantonCode)
+        public async Task<NationalregisterStreetObject> Get(int streetCode, int subcantonCode)
         {
             var item = await _client.GetRijksregisterStraatByRijksregisterStraatCodeAsync(streetCode, subcantonCode);
-            var result = Mapper.Map<NationalregisterstreetObject>(item);
+            var result = Mapper.Map<NationalregisterStreetObject>(item);
             return result;
         }
 

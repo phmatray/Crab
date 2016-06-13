@@ -150,7 +150,7 @@ namespace Crab.NetCoreApi
                 .ForMember(dest => dest.StartExploitation, conf => conf.MapFrom(src => src.BeginBewerking))
                 .ForMember(dest => dest.StartOrganisation, conf => conf.MapFrom(src => src.BeginOrganisatie));
 
-            CreateMap<RijksregisterstraatObject, NationalregisterstreetObject>()
+            CreateMap<RijksregisterstraatObject, NationalregisterStreetObject>()
                 .ForMember(dest => dest.StreetCode, conf => conf.MapFrom(src => src.StraatCode))
                 .ForMember(dest => dest.SubcantonCode, conf => conf.MapFrom(src => src.SubkantonCode))
                 .ForMember(dest => dest.Streetname, conf => conf.MapFrom(src => src.Straatnaam))
@@ -273,7 +273,7 @@ namespace Crab.NetCoreApi
             CreateMap<PostkantonItem, PostalcantonItem>()
                 .ForMember(dest => dest.PostalcantonCode, conf => conf.MapFrom(src => src.PostkantonCode));
 
-            CreateMap<RijksregisterstraatItem, NationalregisterstreetItem>()
+            CreateMap<RijksregisterstraatItem, NationalregisterStreetItem>()
                 .ForMember(dest => dest.StreetCode, conf => conf.MapFrom(src => src.StraatCode))
                 .ForMember(dest => dest.SubcantonCode, conf => conf.MapFrom(src => src.SubkantonCode));
 

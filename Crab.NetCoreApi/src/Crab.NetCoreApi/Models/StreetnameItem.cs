@@ -18,6 +18,5 @@ namespace Crab.NetCoreApi.Models
         public string UrlRoadsegments => $"streetnames/{StreetnameId}/roadsegments";
         public string UrlPostaladdresses => $"streetnames/{StreetnameId}/postaladdresses";
         public string UrlNationalregisterstreets => $"streetnames/{StreetnameId}/nationalregisterstreets";
-        public string UrlAddresstypes => $"streetnames/{StreetnameId}/addresstypes";
     }
 }
