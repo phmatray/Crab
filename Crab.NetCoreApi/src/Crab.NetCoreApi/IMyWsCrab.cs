@@ -73,7 +73,7 @@ namespace Crab.NetCoreApi
         //Task<HuisnummerWithStatusItem[]> ListHuisnummersWithStatusByStraatnaamIdAsync(int StraatnaamId, int SorteerVeld);
         Task<CodeItem[]> ListOrganisatiesAsync(int SorteerVeld);
         Task<PerceelItem[]> ListPercelenByHuisnummerIdAsync(int HuisnummerId);
-        Task<PostadresItem[]> ListPostadressenByStraatnaamIdAsync(int StraatnaamId);
+        //Task<PostadresItem[]> ListPostadressenByStraatnaamIdAsync(int StraatnaamId);
         //Task<PostkantonItem[]> ListPostkantonsByGemeenteIdAsync(int GemeenteId);
         Task<RijksregisterstraatItem[]> ListRijksregisterStratenByStraatnaamIdAsync(int StraatnaamId);
         Task<RijksregisterAdresItem[]> ListRijksregisterAdresByHuisnummerIdAsync(int HuisnummerId, int SorteerVeld);

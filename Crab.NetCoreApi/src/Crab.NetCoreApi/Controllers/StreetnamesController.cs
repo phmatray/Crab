@@ -72,5 +72,14 @@ namespace Crab.NetCoreApi.Controllers
             var result = Mapper.Map<IEnumerable<RoadsegmentItem>>(items);
             return result;
         }
+
+        // GET api/streetnames/1/postaladdresses
+        [HttpGet("{id}/postaladdresses")]
+        public async Task<IEnumerable<PostaladdressItem>> GetPostaladdresses(int id)
+        {
+            var items = await _client.ListPostadressenByStraatnaamIdAsync(id);
+            var result = Mapper.Map<IEnumerable<PostaladdressItem>>(items);
+            return result;
+        }
     }
 }
