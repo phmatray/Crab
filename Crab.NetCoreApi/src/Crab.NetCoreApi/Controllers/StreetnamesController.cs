@@ -81,5 +81,23 @@ namespace Crab.NetCoreApi.Controllers
             var result = Mapper.Map<IEnumerable<PostaladdressItem>>(items);
             return result;
         }
+
+        // GET api/streetnames/1/nationalregisterstreets
+        [HttpGet("{id}/nationalregisterstreets")]
+        public async Task<IEnumerable<NationalregisterstreetItem>> GetNationalregisterstreets(int id)
+        {
+            var items = await _client.ListRijksregisterStratenByStraatnaamIdAsync(id);
+            var result = Mapper.Map<IEnumerable<NationalregisterstreetItem>>(items);
+            return result;
+        }
+
+        // GET api/streetnames/1/addresstypes
+        [HttpGet("{id}/addresstypes")]
+        public async Task<IEnumerable<CodenameItem>> GetAddresstypes(int id)
+        {
+            var items = await _client.ListAardAdressenAsync(id);
+            var result = Mapper.Map<IEnumerable<CodenameItem>>(items);
+            return result;
+        }
     }
 }

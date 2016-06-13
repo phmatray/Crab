@@ -54,7 +54,7 @@ namespace Crab.NetCoreApi
         //Task<StraatnaamWithStatusObject> GetStraatnaamWithStatusByStraatnaamIdAsync(int StraatnaamId);
         Task<SubadresObject> GetSubadresBySubadresIdAsync(int SubadresId);
         Task<SubadresWithStatusObject> GetSubadresWithStatusBySubadresIdAsync(int SubadresId);
-        Task<CodeItem[]> ListAardAdressenAsync(int SorteerVeld);
+        //Task<CodeItem[]> ListAardAdressenAsync(int SorteerVeld);
         Task<CodeItem[]> ListAardGebouwenAsync(int SorteerVeld);
         Task<CodeItem[]> ListAardSubadressenAsync(int SorteerVeld);
         Task<CodeItem[]> ListAardTerreinobjectenAsync(int SorteerVeld);
@@ -75,7 +75,7 @@ namespace Crab.NetCoreApi
         Task<PerceelItem[]> ListPercelenByHuisnummerIdAsync(int HuisnummerId);
         //Task<PostadresItem[]> ListPostadressenByStraatnaamIdAsync(int StraatnaamId);
         //Task<PostkantonItem[]> ListPostkantonsByGemeenteIdAsync(int GemeenteId);
-        Task<RijksregisterstraatItem[]> ListRijksregisterStratenByStraatnaamIdAsync(int StraatnaamId);
+        //Task<RijksregisterstraatItem[]> ListRijksregisterStratenByStraatnaamIdAsync(int StraatnaamId);
         Task<RijksregisterAdresItem[]> ListRijksregisterAdresByHuisnummerIdAsync(int HuisnummerId, int SorteerVeld);
         Task<RijksregisterAdresItem[]> ListRijksregisterAdresBySubadresIdAsync(int SubadresId, int SorteerVeld);
         //Task<CodeItem[]> ListStatusGebouwenAsync(int SorteerVeld);
