@@ -12,13 +12,13 @@ namespace Crab.NetCoreApi.Models
         public string StreetnameLabel { get; set; }
         public int StatusStreetname { get; set; }
 
-        public string WithoutStatus => $"streetnames/{StreetnameId}";
-        public string Housenumbers => $"streetnames/{StreetnameId}/housenumbers";
-        public string HousenumbersWithstatus => $"streetnames/{StreetnameId}/housenumbers/withstatus";
-        public string Roadobjects => $"streetnames/{StreetnameId}/roadobjects";
-        public string Roadsegments => $"streetnames/{StreetnameId}/roadsegments";
-        public string Postaladdresses => $"streetnames/{StreetnameId}/postaladdresses";
-        public string Nationalregisterstreets => $"streetnames/{StreetnameId}/nationalregisterstreets";
-        public string Addresstypes => $"streetnames/{StreetnameId}/addresstypes";
+        public string UrlWithoutStatus => $"streetnames/{StreetnameId}";
+        public string UrlHousenumbers => $"streetnames/{StreetnameId}/housenumbers";
+        public string UrlHousenumbersWithstatus => $"streetnames/{StreetnameId}/housenumbers/withstatus";
+        public string UrlRoadobjects => $"streetnames/{StreetnameId}/roadobjects";
+        public string UrlRoadsegments => $"streetnames/{StreetnameId}/roadsegments";
+        public string UrlPostaladdresses => $"streetnames/{StreetnameId}/postaladdresses";
+        public string UrlNationalregisterstreets => $"streetnames/{StreetnameId}/nationalregisterstreets";
+        public string UrlAddresstypes => $"streetnames/{StreetnameId}/addresstypes";
     }
 }

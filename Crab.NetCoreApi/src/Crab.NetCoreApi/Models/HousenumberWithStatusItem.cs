@@ -8,15 +8,15 @@ namespace Crab.NetCoreApi.Models
         public string Housenumber { get; set; }
         public int StatusHousenumber { get; set; }
 
-        public string WithoutStatus => $"housenumbers/{HousenumberId}";
-        public string Postaladdress => $"housenumbers/{HousenumberId}/postaladdress";
-        public string Postalcanton => $"housenumbers/{HousenumberId}/postalcanton";
-        public string Addresspositions => $"housenumbers/{HousenumberId}/addresspositions";
-        public string Buildings => $"housenumbers/{HousenumberId}/buildings";
-        public string Parcels => $"housenumbers/{HousenumberId}/parcels";
-        public string NationalregisterAddresses => $"housenumbers/{HousenumberId}/nationalregisteraddresses";
-        public string Subaddresses => $"housenumbers/{HousenumberId}/subaddresses";
-        public string SubaddressesWithstatus => $"housenumbers/{HousenumberId}/subaddresses/withstatus";
-        public string Terrainobjects => $"housenumbers/{HousenumberId}/terrainobjects";
+        public string UrlWithoutStatus => $"housenumbers/{HousenumberId}";
+        public string UrlPostaladdress => $"housenumbers/{HousenumberId}/postaladdress";
+        public string UrlPostalcanton => $"housenumbers/{HousenumberId}/postalcanton";
+        public string UrlAddresspositions => $"housenumbers/{HousenumberId}/addresspositions";
+        public string UrlBuildings => $"housenumbers/{HousenumberId}/buildings";
+        public string UrlParcels => $"housenumbers/{HousenumberId}/parcels";
+        public string UrlNationalregisterAddresses => $"housenumbers/{HousenumberId}/nationalregisteraddresses";
+        public string UrlSubaddresses => $"housenumbers/{HousenumberId}/subaddresses";
+        public string UrlSubaddressesWithstatus => $"housenumbers/{HousenumberId}/subaddresses/withstatus";
+        public string UrlTerrainobjects => $"housenumbers/{HousenumberId}/terrainobjects";
     }
 }

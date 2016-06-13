@@ -39,18 +39,18 @@ namespace Crab.NetCoreApi
 
 
 
-        Task<AdrespositieObject> GetAdrespositieByAdrespositieIdAsync(int AdrespositieId);
+        //Task<AdrespositieObject> GetAdrespositieByAdrespositieIdAsync(int AdrespositieId);
         //Task<GemeenteObject> GetGemeenteByGemeenteIdAsync(int GemeenteId);
-        Task<GemeenteObject> GetGemeenteByNISGemeenteCodeAsync(int NISGemeenteCode);
+        //Task<GemeenteObject> GetGemeenteByNISGemeenteCodeAsync(int NISGemeenteCode);
         //Task<HuisnummerObject> GetHuisnummerByHuisnummerIdAsync(int HuisnummerId);
         //Task<HuisnummerWithStatusObject> GetHuisnummerWithStatusByHuisnummerIdAsync(int HuisnummerId);
         //Task<PostadresObject> GetPostadresByHuisnummerIdAsync(int HuisnummerId);
         //Task<PostadresObject> GetPostadresBySubadresIdAsync(int SubadresId);
         //Task<PostkantonObject> GetPostkantonByHuisnummerIdAsync(int HuisnummerId);
-        Task<RijksregisterstraatObject> GetRijksregisterStraatByRijksregisterStraatCodeAsync(int StraatCode, int SubkantonCode);
-        Task<StraatnaamObject> GetStraatnaamByRijksregisterStraatCodeAsync(int StraatCode, int SubkantonCode);
+        //Task<RijksregisterstraatObject> GetRijksregisterStraatByRijksregisterStraatCodeAsync(int StraatCode, int SubkantonCode);
+        //Task<StraatnaamObject> GetStraatnaamByRijksregisterStraatCodeAsync(int StraatCode, int SubkantonCode);
         //Task<StraatnaamObject> GetStraatnaamByStraatnaamIdAsync(int StraatnaamId);
-        Task<StraatnaamWithStatusObject> GetStraatnaamWithStatusByRijksregisterStraatCodeAsync(int StraatCode, int SubkantonCode);
+        //Task<StraatnaamWithStatusObject> GetStraatnaamWithStatusByRijksregisterStraatCodeAsync(int StraatCode, int SubkantonCode);
         //Task<StraatnaamWithStatusObject> GetStraatnaamWithStatusByStraatnaamIdAsync(int StraatnaamId);
         //Task<SubadresObject> GetSubadresBySubadresIdAsync(int SubadresId);
         //Task<SubadresWithStatusObject> GetSubadresWithStatusBySubadresIdAsync(int SubadresId);

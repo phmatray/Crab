@@ -4,6 +4,8 @@ namespace Crab.NetCoreApi.Models
 {
     public class AddresspositionObject
     {
+        public string Url => $"addresspositions/{AddresspositionId}/";
+
         public int AddresspositionId { get; set; }
         public int AddresspositionProvenance { get; set; }
         public string Geometry { get; set; }

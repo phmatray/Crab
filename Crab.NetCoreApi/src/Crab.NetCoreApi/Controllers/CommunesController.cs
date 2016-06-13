@@ -77,5 +77,14 @@ namespace Crab.NetCoreApi.Controllers
                 return result;
             }
         }
+
+        // GET api/communes/niscode/1
+        [HttpGet("niscode/{nisCode}")]
+        public async Task<CommuneObject> GetByNisCode(int nisCode)
+        {
+            var item = await _client.GetGemeenteByNISGemeenteCodeAsync(nisCode);
+            var result = Mapper.Map<CommuneObject>(item);
+            return result;
+        }
     }
 }

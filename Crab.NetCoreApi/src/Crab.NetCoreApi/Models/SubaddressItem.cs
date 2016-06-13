@@ -7,9 +7,9 @@ namespace Crab.NetCoreApi.Models
         public int SubaddressId { get; set; }
         public string Subaddress { get; set; }
 
-        public string WithStatus => $"subaddresses/{SubaddressId}/withstatus";
-        public string Postaladdress => $"subaddresses/{SubaddressId}/postaladdress";
-        public string Addresspositions => $"subaddresses/{SubaddressId}/addresspositions";
-        public string Nationalregisteraddresses => $"subaddresses/{SubaddressId}/nationalregisteraddresses";
+        public string UrlWithStatus => $"subaddresses/{SubaddressId}/withstatus";
+        public string UrlPostaladdress => $"subaddresses/{SubaddressId}/postaladdress";
+        public string UrlAddresspositions => $"subaddresses/{SubaddressId}/addresspositions";
+        public string UrlNationalregisteraddresses => $"subaddresses/{SubaddressId}/nationalregisteraddresses";
     }
 }

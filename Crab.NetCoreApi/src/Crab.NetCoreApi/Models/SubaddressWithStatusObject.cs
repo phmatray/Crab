@@ -16,9 +16,9 @@ namespace Crab.NetCoreApi.Models
         public int StartExploitation { get; set; }
         public int StartOrganisation { get; set; }
 
-        public string WithoutStatus => $"subaddresses/{SubaddressId}";
-        public string Postaladdress => $"subaddresses/{SubaddressId}/postaladdress";
-        public string Addresspositions => $"subaddresses/{SubaddressId}/addresspositions";
-        public string Nationalregisteraddresses => $"subaddresses/{SubaddressId}/nationalregisteraddresses";
+        public string UrlWithoutStatus => $"subaddresses/{SubaddressId}";
+        public string UrlPostaladdress => $"subaddresses/{SubaddressId}/postaladdress";
+        public string UrlAddresspositions => $"subaddresses/{SubaddressId}/addresspositions";
+        public string UrlNationalregisteraddresses => $"subaddresses/{SubaddressId}/nationalregisteraddresses";
     }
 }

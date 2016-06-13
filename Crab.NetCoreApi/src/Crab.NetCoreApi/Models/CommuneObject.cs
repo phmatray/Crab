@@ -5,7 +5,7 @@ namespace Crab.NetCoreApi.Models
     public class CommuneObject
     {
         public string Url => $"/communes/{CommuneId}/";
-        public string Description => "...";
+        public string UrlByNisCode => $"/communes/niscode/{CommuneNISCode}/";
 
         public int RegionId { get; set; }
         public int CommuneId { get; set; }
@@ -25,8 +25,8 @@ namespace Crab.NetCoreApi.Models
         public int StartExploitation { get; set; }
         public int StartOrganisation { get; set; }
 
-        public string Postalcantons => $"/communes/{CommuneId}/postalcantons/";
-        public string Streetnames => $"/communes/{CommuneId}/streetnames/";
-        public string StreetnamesWithStatus => $"/communes/{CommuneId}/streetnames/withstatus/";
+        public string UrlPostalcantons => $"/communes/{CommuneId}/postalcantons/";
+        public string UrlStreetnames => $"/communes/{CommuneId}/streetnames/";
+        public string UrlStreetnamesWithStatus => $"/communes/{CommuneId}/streetnames/withstatus/";
     }
 }
