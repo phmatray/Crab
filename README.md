@@ -1,3 +1,5 @@
+![Crab banner](.github/banner.png)
+
 # Crab — Belgian CRAB address API client for .NET
 
 A .NET client library for the Belgian CRAB (Centraal Referentieadressenbestand / Fichier Central d'Adresses de Référence) web service, providing access to the official Belgian address database with street names, building numbers, and geographical coordinates.
