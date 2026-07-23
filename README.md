@@ -40,10 +40,43 @@ foreach (var address in addresses)
     Console.WriteLine($"{address.StreetName} {address.HouseNumber}, {address.Municipality}");
 ```
 
+## Usage
+
+Crab.NetCoreApi wraps the Belgian CRAB SOAP web service behind a plain ASP.NET Core REST API. Run it locally, then call it like any HTTP API:
+
+```bash
+cd Crab.NetCoreApi/src/Crab.NetCoreApi
+dotnet run
+```
+
+```bash
+curl http://localhost:5000/api/streetnames/1
+```
+
+```json
+{
+  "id": 1,
+  "name": "Rue de la Loi",
+  "status": "InGebruik"
+}
+```
+
+Related resources are reachable from the same controller, e.g. `GET /api/streetnames/1/housenumbers` or `GET /api/streetnames/1/postaladdresses`, each proxying and mapping the underlying `WsCrabClient` SOAP calls to plain JSON DTOs.
+
 ## 📄 License
 MIT — see LICENSE
 
 ---
+
+## Roadmap
+
+- [ ] Replace the legacy SOAP `Service Reference` client with a modern, generated client (WCF Core / CoreWCF or a hand-rolled SOAP envelope client)
+- [ ] Publish an official `Crab` NuGet package matching the install instructions above
+- [ ] Add automated tests around the controller-to-SOAP mapping layer
+- [ ] Add caching for frequently requested reference data (municipalities, postal codes)
+- [ ] Containerize the API with a ready-to-use Dockerfile
+
+See the [open issues](https://github.com/phmatray/Crab/issues) for the full list of proposed features and known issues.
 
 <!-- portfolio-sections:start -->
 
