@@ -78,6 +78,14 @@ curl http://localhost:5000/api/streetnames/1
 
 Related resources are reachable from the same controller, e.g. `GET /api/streetnames/1/housenumbers` or `GET /api/streetnames/1/postaladdresses`, each proxying and mapping the underlying `WsCrabClient` SOAP calls to plain JSON DTOs.
 
+<!-- portfolio-techstack:start -->
+
+## Tech Stack
+
+- **C#**
+
+<!-- portfolio-techstack:end -->
+
 ## 📄 License
 MIT — see LICENSE
 
