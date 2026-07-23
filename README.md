@@ -15,6 +15,21 @@
 [![Last commit](https://img.shields.io/github/last-commit/phmatray/Crab)](https://github.com/phmatray/Crab/commits)
 <!-- portfolio-badges:end -->
 
+<!-- portfolio-toc:start -->
+
+## Table of Contents
+
+- [✨ Features](#-features)
+- [📦 Installation](#-installation)
+- [🚀 Quick Start](#-quick-start)
+- [Usage](#usage)
+- [📄 License](#-license)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+
+<!-- portfolio-toc:end -->
+
+
 
 A .NET client library for the Belgian CRAB (Centraal Referentieadressenbestand / Fichier Central d'Adresses de Référence) web service, providing access to the official Belgian address database with street names, building numbers, and geographical coordinates.
 
