@@ -8,6 +8,7 @@
 ![Top language](https://img.shields.io/github/languages/top/phmatray/Crab)
 [![Stars](https://img.shields.io/github/stars/phmatray/Crab?style=social)](https://github.com/phmatray/Crab/stargazers)
 [![Forks](https://img.shields.io/github/forks/phmatray/Crab?style=social)](https://github.com/phmatray/Crab/network/members)
+[![License](https://img.shields.io/github/license/phmatray/Crab)](https://github.com/phmatray/Crab/blob/HEAD/LICENSE)
 
 <!-- Activity -->
 [![Issues](https://img.shields.io/github/issues/phmatray/Crab)](https://github.com/phmatray/Crab/issues)
